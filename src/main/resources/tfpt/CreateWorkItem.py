@@ -18,7 +18,7 @@ class WinrmRemoteScript2(WinrmRemoteScript):
         self.super__customize(options)
         options.set(CifsConnectionBuilder.CIFS_PORT, cifsPort)
 
-script = WinrmRemoteScript2(username, password, address, remotePath, script, timeout, cifsPort)
+script = WinrmRemoteScript2(username, password, address, remotePath, script, timeout, cifsPortTfs)
 exitCode = script.execute()
 
 output = script.getStdout()
